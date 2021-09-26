@@ -1,0 +1,80 @@
+:root {
+    --bg-color: black;
+    --mail-color: #ffa500;
+    --main-color-transparent: rgba(255, 166, 0, 0.459);
+    --header-font-family: 'Creepster', cursive;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--mail-color);
+    text-align: center;
+}
+
+#park-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.park-card {
+    border: 3px solid var(--main-color);
+    border-radius: 1em;
+    max-width: 350px;
+}
+
+.park-card img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.park-card .title {
+    font-size: 1.25em;
+    font-family: var(--header-font-family);
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.show img{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.attraction {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--main-color-transparent);
+}
+
+.attraction-content {
+    background-color: black;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 1em;
+    width: 80%;
+}
+
+.close {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

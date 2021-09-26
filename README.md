@@ -2,21 +2,21 @@
 
 Models:
 
-User: 
+User:
 - Name
 
-Park: 
-- Name
+Park:
+- Name 
 - Address
 - City
 - State
 - Image
+- Details 
 - user_id
-- Details
 
-Attractions:
+Attraction:
 - Title
-- Image
+- Image 
 - park_id
 - Scare Rating - integer
 - Description
