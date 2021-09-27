@@ -43,8 +43,8 @@ class Park {
     }
 
     static renderIndex = () => {
-        main.innerHTML = ` `
-        main.appendChild(parkContainer)
+        const main = document.getElementById("main")
+        main.innerHTML = " "
         const parkContainer = document.createElement("div")
         parkContainer.id = "park-container"
         document.getElementById("main").appendChild(parkContainer)
