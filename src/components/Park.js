@@ -47,7 +47,10 @@ class Park {
         main.innerHTML = " "
         const parkContainer = document.createElement("div")
         parkContainer.id = "park-container"
-        document.getElementById("main").appendChild(parkContainer)
+        const addPark = document.createElement("button")
+        addPark.innerText = "Add a new Spooky Amusement Park!"
+        addPark.addEventListener("click", modal.open)
+        main.append(parkContainer, addPark)
         this.all.forEach(park => park.renderCard())
         parkContainer.addEventListener("click", this.handleIndexClick)
     }
