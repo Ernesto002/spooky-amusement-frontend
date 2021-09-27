@@ -31,6 +31,27 @@ class Park {
         </div>`
     }
 
+    static openParkForm = () => {
+        modal.main.innerHTML += `
+        <h1>Add your park!</h1>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" name="name"><br>
+            <label for="address">Adress:</label><br>
+            <input type="text" name="address"><br>
+            <label for="city">City:</label><br>
+            <input type="text" name="city"><br>
+            <label for="state">State:</label><br>
+            <input type="text" name="state"><br>
+            <label for="detail">Description:</label><br>
+            <input type="text" name="detail"><br>
+            <label for="imageUrl">Image:</label><br>
+            <input type="text" name="imageUrl"><br>
+            <input type="submit" value="Add park!"><br>
+        </form>
+        `
+        modal.open()
+    }
 
     static find = (id) => this.all.find(park => park.data.id == id)
 
@@ -49,7 +70,7 @@ class Park {
         parkContainer.id = "park-container"
         const addPark = document.createElement("button")
         addPark.innerText = "Add a new Spooky Amusement Park!"
-        addPark.addEventListener("click", modal.open)
+        addPark.addEventListener("click", this.openParkForm)
         main.append(parkContainer, addPark)
         this.all.forEach(park => park.renderCard())
         parkContainer.addEventListener("click", this.handleIndexClick)
