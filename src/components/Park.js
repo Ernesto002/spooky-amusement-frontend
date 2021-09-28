@@ -32,12 +32,12 @@ class Park {
     }
 
     static openParkForm = () => {
-        modal.main.innerHTML += `
+        modal.main.innerHTML = `
         <h1>Add your park!</h1>
         <form>
             <label for="name">Name:</label><br>
             <input type="text" name="name"><br>
-            <label for="address">Adress:</label><br>
+            <label for="address">Address:</label><br>
             <input type="text" name="address"><br>
             <label for="city">City:</label><br>
             <input type="text" name="city"><br>
@@ -50,11 +50,28 @@ class Park {
             <input type="submit" value="Add park!"><br>
         </form>
         `
+        modal.main.querySelector("form").addEventListener("submit", this.handleSubmit)
         modal.open()
     }
 
     static find = (id) => this.all.find(park => park.data.id == id)
 
+    static handleSubmit = (e) => {
+        e.preventDefault()
+        const newPark = {
+          name: e.target.name.value,
+          address: e.target.address.value,
+          city: e.target.city.value,
+          state: e.target.state.value,
+          detail: e.target.detail.value,
+          image_url: e.target.imageUrl.value
+        }
+        api.createPark(newPark).then(park => {
+          new Park(park).renderCard()
+        })
+        modal.close()
+        e.target.reset()
+    }
 
     static handleIndexClick = (e) => {
         if (e.target.tagName == "IMG" || e.target.classList.contains("title")){
@@ -65,7 +82,7 @@ class Park {
 
     static renderIndex = () => {
         const main = document.getElementById("main")
-        main.innerHTML = " "
+        main.innerHTML = ""
         const parkContainer = document.createElement("div")
         parkContainer.id = "park-container"
         const addPark = document.createElement("button")
