@@ -8,7 +8,7 @@ class Park {
     }
 
     renderShow = () => {
-        const { name, address, city, state, detail, imageUrl } = this.data
+        const { name, address, city, state, detail, imageUrl, username } = this.data
         document.getElementById("main").innerHTML = `
         <div class="show">
             <h1>${name}</h1>
@@ -16,6 +16,7 @@ class Park {
             <p>${address}</p>
             <p>${city}, ${state}</p>
             <p>${detail}</p>
+            <p>Owned by: ${username}</p>
             <div class="container"></div>
         </div>
         <button id="goBack">Go Back</button>
