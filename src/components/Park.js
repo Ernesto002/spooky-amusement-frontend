@@ -3,6 +3,7 @@ class Park {
     static all = []
     constructor(data){
         this.data = data
+        this.attractions = this.data.attractions.map(attraction => new Attraction(attraction))
         this.constructor.all.push(this)
     }
 
@@ -15,10 +16,12 @@ class Park {
             <p>${address}</p>
             <p>${city}, ${state}</p>
             <p>${detail}</p>
+            <div class="container"></div>
         </div>
         <button id="goBack">Go Back</button>
         `
         document.getElementById("goBack").addEventListener("click", Park.renderIndex)
+        this.attractions.forEach(attraction => attraction.render())
     }
 
     renderCard = () => {
