@@ -3,7 +3,7 @@ class Park {
     static all = []
     constructor(data){
         this.data = data
-        this.attractions = this.data.attractions.map(attraction => new Attraction(attraction))
+        this.attractions = this.data.attractions.map(attraction => new Attraction(attraction, this))
         this.constructor.all.push(this)
     }
 
@@ -27,7 +27,7 @@ class Park {
     renderCard = () => {
         const { name, city, state, imageUrl, id} = this.data
         document.getElementById("park-container").innerHTML += `
-        <div class="park-card" data-id=${id}>
+        <div class="park-card card" data-id=${id}>
             <img src=${imageUrl} alt=${name}/>
             <p class="title">${name}</p>
             <p>${city}, ${state}</p>
@@ -89,6 +89,7 @@ class Park {
         main.innerHTML = ""
         const parkContainer = document.createElement("div")
         parkContainer.id = "park-container"
+        parkContainer.classList.add("container")
         const addPark = document.createElement("button")
         addPark.innerText = "Add a new Spooky Amusement Park!"
         addPark.addEventListener("click", this.openParkForm)

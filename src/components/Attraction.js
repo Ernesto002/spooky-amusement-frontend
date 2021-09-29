@@ -1,7 +1,8 @@
 class Attraction {
 
-    constructor(data){
+    constructor(data, park){
         this.data = data
+        this.park = park
     }
 
     render = () => {
