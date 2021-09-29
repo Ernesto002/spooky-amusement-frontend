@@ -7,6 +7,7 @@ class ApiService {
   getParks = () => fetch(this.api + "/parks").then(res => res.json())
 
   createPark = (newPark) => {
+    newPark.user_id = user.id
     return fetch(this.api + "/parks", {
       method: 'POST', // or 'PUT'
       headers: {

@@ -101,6 +101,7 @@ class Park {
 
     static getParks = () => {
         api.getParks().then(parks => {
+            Park.all = []
             parks.forEach(park => new Park(park))
             this.renderIndex()
         })
