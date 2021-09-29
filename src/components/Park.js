@@ -31,6 +31,7 @@ class Park {
             <img src=${imageUrl} alt=${name}/>
             <p class="title">${name}</p>
             <p>${city}, ${state}</p>
+            <p>Number of attractions: ${this.attractions.length}</p>
         </div>`
     }
 
