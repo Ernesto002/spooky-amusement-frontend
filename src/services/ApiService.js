@@ -19,6 +19,7 @@ class ApiService {
   }
 
   createAttraction = (newAttraction) => {
+    newAttraction.user_id = user.id
     return fetch(this.api + "/attractions", {
       method: 'POST', // or 'PUT'
       headers: {

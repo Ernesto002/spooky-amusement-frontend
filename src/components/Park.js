@@ -8,9 +8,9 @@ class Park {
     }
 
     renderShow = () => {
-        const { name, address, city, state, detail, imageUrl, username } = this.data
+        const { name, address, city, state, detail, imageUrl, username, id } = this.data
         document.getElementById("main").innerHTML = `
-        <div class="show">
+        <div class="park-container" data-id=${id}>
             <h1>${name}</h1>
             <img src=${imageUrl} alt=${name}/>
             <p>${address}</p>
@@ -43,17 +43,17 @@ class Park {
         <h1>Add your park!</h1>
         <form>
             <label for="name">Name:</label><br>
-            <input type="text" name="name"><br>
+            <input type="text" name="name" required><br>
             <label for="address">Address:</label><br>
-            <input type="text" name="address"><br>
+            <input type="text" name="address" required><br>
             <label for="city">City:</label><br>
-            <input type="text" name="city"><br>
+            <input type="text" name="city" required><br>
             <label for="state">State:</label><br>
-            <input type="text" name="state"><br>
+            <input type="text" name="state" required><br>
             <label for="detail">Description:</label><br>
-            <input type="text" name="detail"><br>
+            <input type="text" name="detail" required><br>
             <label for="imageUrl">Image:</label><br>
-            <input type="text" name="imageUrl"><br>
+            <input type="text" name="imageUrl" required><br>
             <input type="submit" value="Add park!"><br>
         </form>
         `

@@ -6,14 +6,14 @@ class Attraction {
     }
 
     render = () => {
-        const { title, description, tickets, image, username } = this.data
+        const { title, description, tickets, image, username, parkId} = this.data
         document.querySelector(".container").innerHTML += `
-        <div class="card">
+        <div class="card" data-id=${parkId}>
             <h2>${title}</h2>
             <img src=${image} alt=${title}/>
             <p>${description}</p>
             <p>Ticket Cost: ${tickets}</p>
-            <p>Created By: ${username}</p>
+            <p>Created By: ${username}
         </div>
         `
     }
@@ -23,13 +23,13 @@ class Attraction {
         <h1>Add an attraction!</h1>
         <form>
             <label for="title">Title:</label><br>
-            <input type="text" name="title"><br>
+            <input type="text" name="title" required><br>
             <label for="description">Description:</label><br>
-            <input type="text" name="description"><br>
+            <input type="text" name="description" required><br>
             <label for="tickets">Ticket Price:</label><br>
-            <input type="number" name="tickets"><br>
+            <input type="number" name="tickets" required><br>
             <label for="image">Image:</label><br>
-            <input type="text" name="image"><br>
+            <input type="text" name="image" required><br>
             <input type="submit" value="Add attraction!"><br>
         </form>
         `
