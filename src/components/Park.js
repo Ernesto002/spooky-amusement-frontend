@@ -10,7 +10,7 @@ class Park {
     renderShow = () => {
         const { name, address, city, state, detail, imageUrl, username, id } = this.data
         document.getElementById("main").innerHTML = `
-        <div class="park-container" data-id=${id}>
+        <div class="show" data-id=${id}>
             <h1>${name}</h1>
             <img src=${imageUrl} alt=${name}/>
             <p>${address}</p>

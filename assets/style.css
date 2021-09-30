@@ -42,8 +42,8 @@ body {
 }
 
 .show > img{
-    width: 50%;
-    height: 20vh;
+    width: 60%;
+    height: 50vh;
     object-fit: cover;
 }
 
