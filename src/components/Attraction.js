@@ -23,14 +23,14 @@ class Attraction {
         <h1>Add an attraction!</h1>
         <form>
             <label for="title">Title:</label><br>
-            <input type="text" name="title" required><br>
-            <label for="description">Description:</label><br>
-            <input type="text" name="description" required><br>
-            <label for="tickets">Ticket Price:</label><br>
-            <input type="number" name="tickets" required><br>
-            <label for="image">Image:</label><br>
-            <input type="text" name="image" required><br>
-            <input type="submit" value="Add attraction!"><br>
+            <input type="text" name="title" placeholder="Spooky Attraction" required><br>
+            <br><label for="description">Description:</label><br>
+            <input type="text" name="description" placeholder="Spooky Description" required><br>
+            <br><label for="tickets">Ticket Cost:</label><br>
+            <input type="number" name="tickets" placeholder="Tickets" required><br>
+            <br><label for="image">Image:</label><br>
+            <input type="text" name="image" placeholder="Spooky Image" required><br>
+            <br><input type="submit" value="Add attraction!"><br>
         </form>
         `
         modal.main.querySelector("form").addEventListener("submit", this.handleAttractionSubmit)

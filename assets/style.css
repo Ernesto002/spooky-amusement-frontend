@@ -2,7 +2,6 @@
     --bg-color: black;
     --mail-color: #ffa500;
     --main-color-transparent: rgba(255, 166, 0, 0.459);
-    --header-font-family: 'Creepster', cursive;
 }
 
 body {
@@ -36,16 +35,15 @@ body {
 }
 
 .card .title {
-    font-size: 1.25em;
+    font-size: 1.65em;
     font-family: var(--header-font-family);
     color: red;
     cursor: pointer;
-    text-decoration: underline;
 }
 
 .show > img{
-    width: 100%;
-    height: 40vh;
+    width: 50%;
+    height: 20vh;
     object-fit: cover;
 }
 

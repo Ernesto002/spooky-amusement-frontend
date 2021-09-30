@@ -43,18 +43,18 @@ class Park {
         <h1>Add your park!</h1>
         <form>
             <label for="name">Name:</label><br>
-            <input type="text" name="name" required><br>
-            <label for="address">Address:</label><br>
-            <input type="text" name="address" required><br>
-            <label for="city">City:</label><br>
-            <input type="text" name="city" required><br>
-            <label for="state">State:</label><br>
-            <input type="text" name="state" required><br>
-            <label for="detail">Description:</label><br>
-            <input type="text" name="detail" required><br>
-            <label for="imageUrl">Image:</label><br>
-            <input type="text" name="imageUrl" required><br>
-            <input type="submit" value="Add park!"><br>
+            <input type="text" name="name" placeholder="Spooky Park" required><br>
+            <br><label for="address">Address:</label><br>
+            <input type="text" name="address" placeholder="Spooky Address" required><br>
+            <br><label for="city">City:</label><br>
+            <input type="text" name="city" placeholder="Spooky City" required><br>
+            <br><label for="state">State:</label><br>
+            <input type="text" name="state" placeholder="Spooky State" required><br>
+            <br><label for="detail">Description:</label><br>
+            <input type="text" name="detail" placeholder="Spooky Description" required><br>
+            <br><label for="imageUrl">Image:</label><br>
+            <input type="text" name="imageUrl" placeholder="Spooky Image" required><br>
+            <br><input type="submit" value="Add park!"><br>
         </form>
         `
         modal.main.querySelector("form").addEventListener("submit", this.handleSubmit)
