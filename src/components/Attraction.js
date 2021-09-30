@@ -32,7 +32,22 @@ class Attraction {
             <input type="submit" value="Add attraction!"><br>
         </form>
         `
-        modal.main.querySelector("form").addEventListener("submit", this.handleSubmit)
+        modal.main.querySelector("form").addEventListener("submit", this.handleAttractionSubmit)
         modal.open()
+    }
+
+    static handleAttractionSubmit = (e) => {
+        e.preventDefault()
+        const newAttraction = {
+            title: e.target.title.value,
+            description: e.target.description.value,
+            tickets: e.target.tickets.value,
+            image: e.target.image.value
+        }
+        api.createAttraction(newAttraction).then(attraction => {
+            new Attraction(attraction).render()
+        })
+        modal.close()
+        e.target.reset()
     }
 }

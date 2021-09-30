@@ -18,6 +18,17 @@ class ApiService {
     .then(response => response.json())
   }
 
+  createAttraction = (newAttraction) => {
+    return fetch(this.api + "/attractions", {
+      method: 'POST', // or 'PUT'
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newAttraction)
+    })
+    .then(response => response.json())
+  }
+
   findOrCreateUser = (username) => {
     return fetch(this.api + "/users", {
       method: 'POST', // or 'PUT'
