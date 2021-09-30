@@ -20,7 +20,19 @@ class Attraction {
     static openAttractionForm = () => {
         modal.main.innerHTML = `
         <h1>Add an attraction!</h1>
+        <form>
+            <label for="title">Title:</label><br>
+            <input type="text" name="title"><br>
+            <label for="description">Description:</label><br>
+            <input type="text" name="description"><br>
+            <label for="tickets">Ticket Price:</label><br>
+            <input type="number" name="tickets"><br>
+            <label for="image">Image:</label><br>
+            <input type="text" name="image"><br>
+            <input type="submit" value="Add attraction!"><br>
+        </form>
         `
+        modal.main.querySelector("form").addEventListener("submit", this.handleSubmit)
         modal.open()
     }
 }
