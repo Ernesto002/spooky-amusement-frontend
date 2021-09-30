@@ -6,13 +6,14 @@ class Attraction {
     }
 
     render = () => {
-        const { title, description, tickets, image } = this.data
+        const { title, description, tickets, image, username } = this.data
         document.querySelector(".container").innerHTML += `
         <div class="card">
             <h2>${title}</h2>
             <img src=${image} alt=${title}/>
             <p>${description}</p>
             <p>Ticket Cost: ${tickets}</p>
+            <p>Created By: ${username}</p>
         </div>
         `
     }
