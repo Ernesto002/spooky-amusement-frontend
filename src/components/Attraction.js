@@ -16,4 +16,11 @@ class Attraction {
         </div>
         `
     }
+
+    static openAttractionForm = () => {
+        modal.main.innerHTML = `
+        <h1>Add an attraction!</h1>
+        `
+        modal.open()
+    }
 }

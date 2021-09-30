@@ -19,9 +19,11 @@ class Park {
             <p>Owned by: ${username}</p>
             <div class="container"></div>
         </div>
+        <button id="addAttraction">Add an attraction!</button>
         <button id="goBack">Go Back</button>
         `
         document.getElementById("goBack").addEventListener("click", Park.renderIndex)
+        document.getElementById("addAttraction").addEventListener("click", Attraction.openAttractionForm)
         this.attractions.forEach(attraction => attraction.render())
     }
 
