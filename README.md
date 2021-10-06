@@ -48,3 +48,12 @@ into your terminal for mac in order to use the app.
 # Back-end repository
 
 The back-end repository for this app can be found [here](https://github.com/Ernesto002/spooky-amusement-backend).
+
+# Contributing
+
+Bug reports and pull requesta are welcome on GitHub at https://github.com/Ernesto002/spooky-amusement-frontend/tree/main. This project is intended to be a safe, welcoming space for collaboration, and contributers are expected to adhere to the [Code of Conduct]
+(https://github.com/Ernesto002/spooky-amusement-frontend/commit/80198760b72deb2446c35a99d2d9484c97ee0405)
+
+# License
+
+This code is available for then general public under this [LICENSE](https://github.com/Ernesto002/spooky-amusement-frontend/blob/main/LICENSE).
